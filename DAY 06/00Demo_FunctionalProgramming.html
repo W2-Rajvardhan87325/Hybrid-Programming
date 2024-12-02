@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //-------------------------------------------------------------------------------
+      //--------------------------------Writing Normal Function and Calling it--------
+      //-------------------------------------------------------------------------------
+
+      //   SayHI();
+
+      //   function SayHI() {
+      //     console.log("Hi from JS!");
+      //   }
+      //
+
+      //-------------------------------------------------------------------------------
+      //--------------------------------Hoisting---------------------------------------
+      //-------------------------------------------------------------------------------
+      //Line 23 To 25 same as Line 27 to Line 30
+      //   console.log(v);
+      //   var v = 100;
+      //   console.log(v);
+
+      //   var v = undefined;//In case line 24;v is moved up like line27 automatically
+      //   console.log(v);
+      //   v = 100;
+      //   console.log(v);
+
+      //-------------------------------------------------------------------------------
+      //--------------------------------How to write simple object in JS ------------
+      //-------------------------------------------------------------------------------
+
+      //   var v = {
+      //     No: 1,
+      //     Name: "Mahesh",
+      //     Address: "Pune",
+      //     IsPlaced: true,
+      //     SalaryStatus: undefined,
+      //     JobDetails: { company: "sunbeam", title: "visiting consultant" },
+      //   };
+
+      //   debugger;
+      //   console.log(typeof v);
+      //   console.log(v);
+
+      //   console.log(v.Name);
+      //   console.log(v.JobDetails.company);
+      //   v.Name = "Nilesh";
+      //   console.log(v.Name);
+
+      //-------------------------------------------------------------------------------
+      //--------------------------------Function with Parameter ------------
+      //-------------------------------------------------------------------------------
+
+      //   function SayHi(name) {
+      //     console.log("Hi " + name);
+      //   }
+
+      //   debugger;
+      //SayHi("Mahesh");
+      //SayHi(10);
+
+      //-------------------------------------------------------------------------------
+      //--------------------How types operate with + operator & number------------
+      //-------------------------------------------------------------------------------
+
+      //   var x = 10;
+      //   var y = 20;
+      //   var z = x + y;
+      //   console.log(z);
+
+      //   var x = 10;
+      //   var y = "20";
+      //   var z = x + y;
+      //   console.log(z);
+
+      //   var x = 10;
+      //   var y = true;
+      //   var z = x + y;
+      //   console.log(z);
+
+      //   var x = 10;
+      //   var y = null;
+      //   var z = x + y;
+      //   console.log(z);
+
+      //   var x = 10;
+      //   var y = undefined;
+      //   var z = x + y;
+      //   console.log(z);
+
+      //-------------------------------------------------------------------------------
+      //--------------------------------More About Functions
+      //-------------------------------------------------------------------------------
+
+      var v = function () {
+        console.log("Hello");
+      };
+      //   function v() {
+      //     console.log("Hello");
+      //   }
+      debugger;
+      console.log(typeof v);
+      v();
+    </script>
+  </body>
+</html>
