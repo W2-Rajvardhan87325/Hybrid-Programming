@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Comparing the precedance of Styles</title>
+    <link rel="stylesheet" href="demodivstyles.min.css" />
+    <style>
+        .A {
+            height: 100px;
+            width: 200px;
+            background-color: green;
+            margin: 5px;
+        }
+
+        .B {
+            background-color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="A B">MY DIV 1</div>
+    <div class="A" style="background-color: orange">MY DIV 2</div>
+    <div class="B" style="width: 200px; margin: 5px;">MY DIV 3</div>
+</body>
+
+</html>
