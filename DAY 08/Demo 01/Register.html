@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="ValidationIsEmpty.js"></script>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <title>Registeration Page</title>
+</head>
+
+<body>
+    <center>
+        <h1>Registration Form</h1>
+        <table style="height: 200px;">
+            <tr>
+                <td>Name :</td>
+                <td><input type="text" placeholder="Enter Name here" id="name"></td>
+                <td style="width: 300px;">
+                    <section style="color: red;" id="nameError"></section>
+                </td>
+            </tr>
+            <tr>
+                <td>Address :</td>
+                <td><input type="text" placeholder="Enter Address here" id="address"></td>
+                <td style="width: 300px;">
+                    <section style="color: red;" id="addressError"></section>
+                </td>
+            </tr>
+            <tr>
+                <td>Age : </td>
+                <td><input type="number" placeholder="Age" min="18" max="100" id="age"></td>
+                <td style="width: 300px;">
+                    <section style="color: red;" id="ageError"></section>
+                </td>
+            </tr>
+            <tr>
+                <td>Email : </td>
+                <td><input type="email" placeholder="Enter Email here" id="email"></td>
+                <td style="width: 300px;">
+                    <section style="color: red;" id="emailError"></section>
+                </td>
+            </tr>
+            <tr>
+                <td>Gender :</td>
+                <td>
+                    <input type="radio" name="gender" value="Male">Male
+                    <input type="radio" name="gender" value="Female">Female
+                    <input type="radio" name="gender" value="Other">Other
+                </td>
+                <td style="width: 300px;">
+                    <section style="color: red;" id="genderError"></section>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2"></br></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <input type="button" value="Register" onclick="validateData()">
+                </td>
+            </tr>
+        </table>
+    </center>
+
+    <script>
+        function validateData() {
+            checkIsEmpty("name", "nameError", "Name is Required..!");
+            checkIsEmpty("address", "addressError", "Address is Required..!");
+            checkIsEmpty("age", "ageError", "Age is Required..!");
+            checkIsEmpty("email", "emailError", "Email is Required..!");
+            validEmail("email", "emailError", "Email Must contains @ & domain.com");
+            checkIsEmpty("gender", "genderError", "Gender is Required..!");
+        }
+    </script>
+
+</body>
+
+</html>
