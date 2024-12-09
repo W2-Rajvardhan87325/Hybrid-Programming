@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <div
+      id="myDiv"
+      style="background-color: black; width: 500px; color: white"
+      onclick="DoSomething()"
+    >
+      This is some data. This is some data. This is some data. This is some
+      data. This is some data. This is some data. This is some data. This is
+      some data. This is some data. This is some data. This is some data. This
+      is some data. This is some data. This is some data. This is some data.
+      This is some data. This is some data. This is some data. This is some
+      data. This is some data. This is some data. This is some data. This is
+      some data. This is some data. This is some data. This is some data. This
+      is some data. This is some data. This is some data. This is some data.
+      This is some data. This is some data. This is some data. This is some
+      data. This is some data. This is some data. This is some data. This is
+      some data. This is some data. This is some data. This is some data. This
+      is some data. This is some data. This is some data. This is some data.
+      This is some data. This is some data. This is some data. This is some
+      data. This is some data. This is some data. This is some data. This is
+      some data. This is some data.
+    </div>
+    <script src="jquery-3.7.1.min.js"></script>
+    <script>
+      var flag = false;
+      function DoSomething() {
+        if (flag == false) {
+          $("#myDiv").css("width", "250px");
+          flag = true;
+        } else {
+          $("#myDiv").css("width", "500px");
+          flag = false;
+        }
+      }
+    </script>
+  </body>
+</html>

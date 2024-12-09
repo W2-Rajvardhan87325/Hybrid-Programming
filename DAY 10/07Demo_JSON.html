@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <center>
+      <table
+        id="myTable"
+        border="1"
+        style="width: 200px; text-align: center"
+      ></table>
+    </center>
+
+    <script>
+      var helper = new XMLHttpRequest();
+      helper.onreadystatechange = () => {
+        if (helper.readyState == 4 && helper.status == 200) {
+          var data = JSON.parse(helper.responseText);
+          var refToTable = document.getElementById("myTable");
+          data.map((item) => {
+            refToTable.innerHTML =
+              refToTable.innerHTML +
+              `<tr>
+                    <td>${item.no}</td>
+                    <td>${item.name}</td>
+                </tr>`;
+          });
+        }
+      };
+      helper.open("GET", "http://127.0.0.1:5500/data.json");
+      helper.send();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <button onclick="Play()">
+      <video
+        id="sampleVideo"
+        src="https://www.w3schools.com/html/mov_bbb.mp4"
+      ></video>
+    </button>
+
+    <script>
+      function Play() {
+        var refTosampleVideo = document.getElementById("sampleVideo");
+        refTosampleVideo.play();
+      }
+    </script>
+  </body>
+</html>

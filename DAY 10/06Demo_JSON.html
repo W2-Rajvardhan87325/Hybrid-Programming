@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <center>
+      <table
+        id="myTable"
+        border="1"
+        style="width: 200px; text-align: center"
+      ></table>
+    </center>
+
+    <script>
+      function CallMeOnReadyStateChange() {
+        switch (helper.readyState) {
+          case 1:
+            console.log("Ready state is 1. Packet Prepared.");
+            break;
+          case 2:
+            console.log("Ready state is 2. Packet Sent.");
+            break;
+          case 3:
+            console.log("Ready state is 3. Waiting for reply....");
+            break;
+          case 4:
+            debugger;
+            console.log("Ready state is 4. Reply Received!.");
+            if (helper.status == 200) {
+              //if reply is successfull!
+              var data = JSON.parse(helper.responseText);
+              var refToTable = document.getElementById("myTable");
+
+              data.map((item) => {
+                refToTable.innerHTML =
+                  refToTable.innerHTML +
+                  `<tr>
+                    <td>${item.no}</td>
+                    <td>${item.name}</td>
+                  </tr>`;
+              });
+              debugger;
+            }
+            break;
+          default:
+            console.log("something else");
+            break;
+        }
+      }
+    </script>
+    <script>
+      debugger;
+      //helper.readyState = 0
+      var helper = new XMLHttpRequest();
+
+      helper.onreadystatechange = CallMeOnReadyStateChange;
+
+      //helper.readyState = 1
+      helper.open("GET", "http://127.0.0.1:5500/data.json");
+
+      //helper.readyState = 2
+      helper.send();
+
+      //waiting...//helper.readyState = 3
+      //when reply is received //helper.readyState = 4
+    </script>
+  </body>
+</html>

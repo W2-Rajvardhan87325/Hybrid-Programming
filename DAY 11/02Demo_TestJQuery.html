@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <center>
+      <table style="width: 300px; text-align: center" border="1">
+        <tr>
+          <td>111</td>
+          <td>Pune</td>
+          <td>MH</td>
+          <td>IN</td>
+        </tr>
+        <tr>
+          <td>111</td>
+          <td>Pune</td>
+          <td>MH</td>
+          <td>IN</td>
+        </tr>
+        <tr>
+          <td>111</td>
+          <td>Pune</td>
+          <td>MH</td>
+          <td>IN</td>
+        </tr>
+        <tr>
+          <td>111</td>
+          <td>Pune</td>
+          <td>MH</td>
+          <td>IN</td>
+        </tr>
+        <tr>
+          <td>111</td>
+          <td>Pune</td>
+          <td>MH</td>
+          <td>IN</td>
+        </tr>
+        <tr>
+          <td>111</td>
+          <td>Pune</td>
+          <td>MH</td>
+          <td>IN</td>
+        </tr>
+        <tr>
+          <td>111</td>
+          <td>Pune</td>
+          <td>MH</td>
+          <td>IN</td>
+        </tr>
+        <tr>
+          <td>111</td>
+          <td>Pune</td>
+          <td>MH</td>
+          <td>IN</td>
+        </tr>
+        <tr>
+          <td>111</td>
+          <td>Pune</td>
+          <td>MH</td>
+          <td>IN</td>
+        </tr>
+        <tr>
+          <td>111</td>
+          <td>Pune</td>
+          <td>MH</td>
+          <td>IN</td>
+        </tr>
+        <tr>
+          <td>111</td>
+          <td>Pune</td>
+          <td>MH</td>
+          <td>IN</td>
+        </tr>
+        <tr>
+          <td>111</td>
+          <td>Pune</td>
+          <td>MH</td>
+          <td>IN</td>
+        </tr>
+        <tr>
+          <td>111</td>
+          <td>Pune</td>
+          <td>MH</td>
+          <td>IN</td>
+        </tr>
+      </table>
+    </center>
+    <script src="jquery-3.7.1.min.js"></script>
+    <script>
+      //   $("tr:odd").css("background-color", "green");
+
+      //   $("tr:even").css("background-color", "green");
+
+      $("tr").mouseover(function () {
+        $(this).css("background-color", "green");
+      });
+
+      $("tr").mouseout(function () {
+        $(this).css("background-color", "white");
+      });
+
+      $("tr").click(function () {
+        $(this).unbind("mouseover mouseout");
+        $(this).css("background-color", "pink");
+      });
+    </script>
+  </body>
+</html>

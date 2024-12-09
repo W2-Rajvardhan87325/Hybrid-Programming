@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 id="myHeader"></h1>
+    <br />
+    <button onclick="Navigate()">Go To Prev Page</button>
+    <script>
+      function Navigate() {
+        window.location.href = "00Demo_Storage.html";
+      }
+    </script>
+    <script>
+      var refTomyHeader = document.getElementById("myHeader");
+      var email = localStorage.getItem("email");
+      var searchedText = localStorage.getItem("searched");
+
+      refTomyHeader.innerText = `You searched for "${searchedText}" using ID : ${email}`;
+    </script>
+  </body>
+</html>

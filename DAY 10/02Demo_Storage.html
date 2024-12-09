@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <center>
+      <table>
+        <tr>
+          <td>Your EMail</td>
+          <td>
+            <input type="text" id="txtEMail" />
+          </td>
+        </tr>
+        <tr>
+          <td>Search</td>
+          <td>
+            <input type="text" id="txtSearch" />
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <button onclick="DoSomething()">Search</button>
+            <button onclick="Navigate()">Go To Next Page</button>
+          </td>
+        </tr>
+      </table>
+    </center>
+    <script>
+      function Navigate() {
+        window.location.href = "03Demo_Storage.html";
+      }
+      function DoSomething() {
+        var refTotxtEMail = document.getElementById("txtEMail");
+        var refTotxtSearch = document.getElementById("txtSearch");
+
+        sessionStorage.setItem("email", refTotxtEMail.value);
+        sessionStorage.setItem("searched", refTotxtSearch.value);
+      }
+    </script>
+  </body>
+</html>

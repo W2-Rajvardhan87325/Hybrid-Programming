@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var promise = new Promise(GetData);
+      promise.then(onSuccess);
+
+      function GetData(f1, f2) {
+        var helper = new XMLHttpRequest();
+        helper.onreadystatechange = () => {
+          if (helper.readyState == 4 && helper.status == 200) {
+            var result = JSON.parse(helper.responseText);
+            f1(result.data);
+          } else if (helper.readyState == 4 && helper.status == 500) {
+            f2();
+          }
+        };
+        helper.open("GET", "https://reqres.in/api/users");
+        helper.send();
+      }
+
+      function onSuccess(data) {
+        console.log(data);
+      }
+
+      //   function onFailure() {
+      //   console.log("something went wrong!");
+      // }
+
+      // GetData(onSuccess, onFailure);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+    <style>
+      .A {
+        height: 100px;
+        width: 100px;
+        background-color: yellow;
+        margin: 10px;
+      }
+
+      .B {
+        height: 100px;
+        width: 100px;
+        background-color: pink;
+        margin: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <center>
+      <button id="btn">Click Me</button>
+      <div id="mydiv1" class="A" title="pune">ABC</div>
+      <div id="mydiv2" class="B" title="panji">XYZ</div>
+      <div id="mydiv3" class="A" title="mumbai">PQR</div>
+      <div id="mydiv4" class="B" title="puri">UVW</div>
+      <section id="mydiv1" class="A">123</section>
+    </center>
+
+    <script src="jquery-3.7.1.min.js"></script>
+    <script>
+      $("#btn").click(function () {
+        ////FIND BY ID + CSS Function
+        // $("#mydiv1").css("background-color", "red");
+        // $("#mydiv1").css("background-color", "red");
+        // $("#mydiv1").css("width", "200px");
+        //$("#mydiv1").css("background-color", "red").css("width", "200px");
+        //$("#mydiv1").css({ "background-color": "red", width: "200px" });
+        ////FIND ALL DIVS
+        // $("div").css("background-color", "red");
+        ////FIND BY CLASS NAME .A
+        //$(".A").css("background-color", "red");
+        ////FIND BY TAGNAME. CLASS NAME DIV.A
+        ///$("div.A").css("background-color", "red");
+        // $("div[title='panji']").css("background-color", "red");
+        // $("div[title^='p']").css("background-color", "red");
+        //$("div[title$='i']").css("background-color", "red");
+        //$("div[title*='n']").css("background-color", "red");
+        //     $("div[title$='i']")
+        //       .filter("div[title*='a']")
+        //       .css("background-color", "red");
+      });
+    </script>
+  </body>
+</html>

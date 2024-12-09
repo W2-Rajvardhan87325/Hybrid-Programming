@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <center>
+      <table
+        id="myTable"
+        border="1"
+        style="width: 200px; text-align: center"
+      ></table>
+    </center>
+    <script>
+      var data = [
+        {
+          no: 1,
+          name: "abc",
+        },
+        {
+          no: 2,
+          name: "xyz",
+        },
+        {
+          no: 3,
+          name: "pqr",
+        },
+      ];
+
+      var refToTable = document.getElementById("myTable");
+
+      data.map((item) => {
+        refToTable.innerHTML =
+          refToTable.innerHTML +
+          `<tr>
+            <td>${item.no}</td>
+            <td>${item.name}</td>
+          </tr>`;
+      });
+    </script>
+  </body>
+</html>
