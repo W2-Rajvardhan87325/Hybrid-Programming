@@ -1,0 +1,16 @@
+{
+  "name": "nodeversion2",
+  "version": "1.0.0",
+  "main": "Connection.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "http": "^0.0.1-security",
+    "mysql2": "^3.11.5"
+  }
+}
