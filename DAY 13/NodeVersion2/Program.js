@@ -14,18 +14,19 @@ var connDetails = {
 function getAllEmployees(req, resp) {
     const connection = mysql.createConnection(connDetails);
     connection.connect();
+
     var queryText = `select * from ${field.EMP_TABLE}`;
+
     connection.query(queryText, (err, result) => {
         resp.setHeader("content-type", "application/json");
         if (err == null) {
             var dataInJSON = JSON.stringify(result);
             resp.write(dataInJSON);
-            resp.end();
         }
         else {
             resp.write(err);
-            resp.end();
         }
+        resp.end();
         connection.end();
     })
 }

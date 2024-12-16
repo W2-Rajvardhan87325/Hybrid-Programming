@@ -62,7 +62,6 @@ function Dashboard() {
     }
 
     const deleteEmployee = (empId) => {
-        debugger;
         const helper = new XMLHttpRequest();
         helper.onreadystatechange = () => {
         }
